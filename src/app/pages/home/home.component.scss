@@ -131,6 +131,10 @@
   padding: 0 16px 50px 16px;
   flex-direction: column;
 
+  background-image: url('/images/ellipse-big.svg');
+  background-position: top 90px center;
+  background-repeat: no-repeat;
+
   & > * {
     max-width: 1200px;
   }
