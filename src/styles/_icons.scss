@@ -99,6 +99,21 @@
     vertical-align: middle;
   }
 
+  &-note:before{
+    content: url('/images/icons/note.svg');
+    vertical-align: middle;
+  }
+
+  &-smile:before{
+    content: url('/images/icons/smile.svg');
+    vertical-align: middle;
+  }
+
+  &-telegram:before{
+    content: url('/images/icons/telegram.svg');
+    vertical-align: middle;
+  }
+
   &-black {
     &-gps:before{
       content: url('/images/icons/gps-black.svg');
