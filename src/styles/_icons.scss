@@ -114,6 +114,16 @@
     vertical-align: middle;
   }
 
+  &-profile-2user:before{
+    content: url('/images/icons/profile-2user.svg');
+    vertical-align: middle;
+  }
+
+  &-message-minus:before{
+    content: url('/images/icons/message-minus.svg');
+    vertical-align: middle;
+  }
+
   &-black {
     &-gps:before{
       content: url('/images/icons/gps-black.svg');
@@ -145,6 +155,18 @@
     }
     &-trend-up:before{
       content: url('/images/icons/trend-up-black.svg');
+      vertical-align: middle;
+    }
+    &-scan:before{
+      content: url('/images/icons/scan-black.svg');
+      vertical-align: middle;
+    }
+    &-messages-2:before{
+      content: url('/images/icons/messages-2-black.svg');
+      vertical-align: middle;
+    }
+    &-message-minus:before{
+      content: url('/images/icons/message-minus-black.svg');
       vertical-align: middle;
     }
   }
