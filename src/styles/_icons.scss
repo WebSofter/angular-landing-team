@@ -1,0 +1,101 @@
+// content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>");
+
+.icon {
+  width: 22.5px;
+  background-size: 22.5px 22.5px;
+  height: auto;
+  display: block;
+
+  &-trend:before{
+    content: url('/images/icons/trend.svg');
+    vertical-align: middle;
+  }
+  &-pie:before{
+    content: url('/images/icons/pie.svg');
+    vertical-align: middle;
+  }
+  &-power:before{
+    content: url('/images/icons/power.svg');
+    vertical-align: middle;
+  }
+  &-plus:before{
+    content: url('/images/icons/plus.svg');
+    vertical-align: middle;
+  }
+  &-close:before{
+    content: url('/images/icons/close.svg');
+    vertical-align: middle;
+  }
+  &-menu:before{
+    content: url('/images/icons/menu.svg');
+    vertical-align: middle;
+  }
+  &-activity:before{
+    content: url('/images/icons/activity.svg');
+    vertical-align: middle;
+  }
+  &-message-text:before{
+    content: url('/images/icons/message-text.svg');
+    vertical-align: middle;
+  }
+  &-messages-2:before{
+    content: url('/images/icons/messages-2.svg');
+    vertical-align: middle;
+  }
+  &-scan:before{
+    content: url('/images/icons/scan.svg');
+    vertical-align: middle;
+  }
+  &-bubble:before{
+    content: url('/images/icons/bubble.svg');
+    vertical-align: middle;
+  }
+  &-cup:before{
+    content: url('/images/icons/cup.svg');
+    vertical-align: middle;
+  }
+  &-document-text:before{
+    content: url('/images/icons/document-text.svg');
+    vertical-align: middle;
+  }
+  &-grammerly:before{
+    content: url('/images/icons/grammerly.svg');
+    vertical-align: middle;
+  }
+  &-presention-chart:before{
+    content: url('/images/icons/presention-chart.svg');
+    vertical-align: middle;
+  }
+  &-profile-2user:before{
+    content: url('/images/icons/profile-2user.svg');
+    vertical-align: middle;
+  }
+  &-profile-add:before{
+    content: url('/images/icons/profile-add.svg');
+    vertical-align: middle;
+  }
+  &-recovery-convert:before{
+    content: url('/images/icons/recovery-convert.svg');
+    vertical-align: middle;
+  }
+  &-lock:before{
+    content: url('/images/icons/lock.svg');
+    vertical-align: middle;
+  }
+  &-crown:before{
+    content: url('/images/icons/crown.svg');
+    vertical-align: middle;
+  }
+  &-document-normal:before{
+    content: url('/images/icons/document-normal.svg');
+    vertical-align: middle;
+  }
+  &-crown-black:before{
+    content: url('/images/icons/crown-black.svg');
+    vertical-align: middle;
+  }
+  &-document-normal-black:before{
+    content: url('/images/icons/document-normal-black.svg');
+    vertical-align: middle;
+  }
+}

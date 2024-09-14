@@ -1,0 +1,295 @@
+@import './_variables';
+@import './_mixins';
+
+// Common titles
+.title {
+  &-big {
+    font-size: $font-size-70;
+    line-height: 69px;
+    font-weight: $font-weight-bold;
+  }
+  &-big-50 {
+    font-size: $font-size-50;
+    line-height: 49px;
+    font-weight: $font-weight-bold;
+  }
+  &-big-58 {
+    font-size: $font-size-58;
+    line-height: 57px;
+    font-weight: $font-weight-bold;
+  }
+  &-medium {
+    font-size: $font-size-33;
+    line-height: 32px;
+    font-weight: $font-weight-bold;
+  }
+  &-medium-22 {
+    font-size: $font-size-22;
+    line-height: 21px;
+    font-weight: $font-weight-bold;
+  }
+  &-medium-24 {
+    font-size: $font-size-24;
+    line-height: 23px;
+    font-weight: $font-weight-bold;
+  }
+  &-semibold {
+    font-size: $font-size-12;
+    line-height: 0;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// Common fonts
+.font {
+  &-family {
+    &__permanent {
+      font-family: $font-family-permanent;
+    }
+
+    &__poppins {
+      font-family: $font-family-poppins;
+    }
+  }
+}
+
+// Text
+.text {
+  // Colors
+  &-blue {
+    color: $color-blue-6;
+  }
+  &-white {
+    color: $color-white;
+  }
+  &-black {
+    color: $color-black;
+  }
+  &-gray {
+    color: $color-gray;
+  }
+  // Alignments
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+
+  // Blocks
+  &-description {
+    &__gray {
+      color: $color-gray;
+      font-size: $font-size-18;
+      font-weight: $font-weight-regular;
+      &-16 {
+        color: $color-gray;
+        font-size: $font-size-16;
+      }
+    }
+    &__white {
+      color: $color-white;
+      font-size: $font-size-16;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  // Elipsis
+  &-ellipsis {
+
+    &-1, &-2, &-3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+    }
+
+    &-1 {
+      -webkit-line-clamp: 1;
+      -moz-line-clamp: 1;
+      line-clamp: 1;
+    }
+    &-2 {
+      -webkit-line-clamp: 2;
+      -moz-line-clamp: 2;
+      line-clamp: 2;
+    }
+    &-3 {
+      -webkit-line-clamp: 3;
+      -moz-line-clamp: 3;
+      line-clamp: 3;
+    }
+  }
+}
+
+.bg {
+  // Colors
+  &-blue {
+    background-color: $color-blue-6;
+  }
+  &-white {
+    background-color: $color-white;
+  }
+  &-black {
+    background-color: $color-black;
+  }
+  &-gray {
+    &-4 {
+      background-color: $color-gray-4;
+    }
+    &-5 {
+      background-color: $color-gray-5;
+    }
+    &-6 {
+      background-color: $color-gray-6;
+    }
+    &-7 {
+      background-color: $color-gray-7;
+    }
+    &-8 {
+      background-color: $color-gray-8;
+    }
+    &-9 {
+      background-color: $color-gray-9;
+    }
+    &-10 {
+      background-color: $color-gray-10;
+    }
+  }
+}
+
+// Sizes
+.w {
+  &-100 {
+    width: 100%;
+  }
+  &-fit {
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+    width: fill-available;
+  }
+}
+
+// Flex
+.d-flex {
+  display: flex;
+}
+.flex {
+  &-row {
+    flex-direction: row;
+  }
+  &-column {
+    flex-direction: column;
+  }
+}
+.justify {
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-end {
+    justify-content: end;
+  }
+}
+.align {
+  &-center {
+    align-items: center;
+  }
+}
+// Borders
+.border {
+  &-1 {
+    border-radius: $spacing-unit-14;
+  }
+  &-2 {
+    border-radius: $spacing-unit-32;
+  }
+  &-1 {
+    border-radius: $spacing-unit-40;
+  }
+}
+
+// List
+.list {
+  &-none {
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+
+// Position
+.position {
+  &-relative {
+    position: relative;
+  }
+  &-absolute {
+    position: absolute;
+  }
+  &-fixed {
+    position: fixed;
+  }
+}
+
+// Cursor
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+}
+
+// Adaptive
+.hide-to {
+  &-sm {
+    @include respond-to('sm') {
+      display: none!important;
+    }
+  }
+  &-md {
+    @include respond-to('md') {
+      display: none!important;
+    }
+  }
+  &-lg {
+    @include respond-to('lg') {
+      display: none!important;
+    }
+  }
+  &-xl {
+    @include respond-to('xl') {
+      display: none!important;
+    }
+  }
+}
+.hide-from {
+  &-sm {
+    @include respond-to('lsm') {
+      display: none!important;
+    }
+  }
+  &-md {
+    @include respond-to('lmd') {
+      display: none!important;
+    }
+  }
+  &-lg {
+    @include respond-to('llg') {
+      display: none!important;
+    }
+  }
+  &-xl {
+    @include respond-to('lxl') {
+      display: none!important;
+    }
+  }
+}
+
+// Disabled

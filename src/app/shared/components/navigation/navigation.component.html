@@ -1,0 +1,32 @@
+<nav class="top-nav">
+  <div class="main-menu">
+    <div class="top-logo">
+      <img src="images/logo.svg" />
+    </div>
+    <div class="menu-wrapper" [ngClass]="isMobileMenuOpened ? 'mobile-active' : 'd-none'">
+      <ul>
+        <li class="menu-item">
+          <a routerLink="/home" routerLinkActive="active">Главная</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="/products" routerLinkActive="active">Продукты</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="/about" routerLinkActive="active">О нас</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="/blog" routerLinkActive="active">Блог</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="end-menu">
+    <span class="ext-menu-auth">
+      <a href="#" class="btn-link__white-big">Войти</a>
+      <button class="btn-primary__white-big">Зарегистрироваться</button>
+    </span>
+    <span class="ext-menu-mobile cursor-pointer" (click)="onOpenMenuToggle()">
+      <span class="text-white mr-1">Меню</span><i class="text-blue" [ngClass]="isMobileMenuOpened ? 'icon-close' : 'icon-menu'"></i>
+    </span>
+  </div>
+</nav>

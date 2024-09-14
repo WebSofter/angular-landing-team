@@ -1,0 +1,15 @@
+<div class="accordion">
+  <div *ngFor="let item of items; let i = index" class="accordion-item">
+    <div class="accordion-header" (click)="toggle(i)" [ngClass]="{'accordion-active': isExpanded[i]}">
+      <span class="accordion-header__title"><b>{{ item.title }}</b></span>
+      <span class="accordion-header__icon">
+        @if(isExpanded[i]) {
+          <i class="icon-close"></i>
+        } @else {
+          <i class="icon-plus"></i>
+        }
+      </span>
+    </div>
+    <div class="accordion-body" [ngClass]="{'hidden': !isExpanded[i]}" [innerHTML]="item.content"></div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+@import './_variables';
+.btn {
+  padding: $spacing-unit-14 $spacing-unit-26;
+  font-size: $font-size-16;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+  &-link__white-big {
+    padding: $spacing-unit-14 $spacing-unit-26;
+    background-color: initial;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  &-primary__white-big {
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    background-color: $color-blue-11;
+    padding: $spacing-unit-14 $spacing-unit-26;
+    border-radius: $spacing-unit-26;
+    font-size: $font-size-16;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+
+    cursor: pointer;
+    border: none;
+
+    &:enabled {
+      background-color: $color-blue-11;
+    }
+    &:hover{
+      background-color: $color-white;
+    }
+    &:focus{
+      background-color: $color-white;
+      border: 2px solid $color-blue-9;
+    }
+    &:disabled{
+      background-color: $color-gray-1;
+    }
+  }
+
+  &-primary__black-big{
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    background-color: $color-black;
+    padding: $spacing-unit-14 $spacing-unit-26;
+    border-radius: $spacing-unit-26;
+    font-size: $font-size-16;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+
+    cursor: pointer;
+    border: none;
+
+    &:enabled {
+      background-color: $color-blue-11;
+    }
+    &:hover{
+      background-color: $color-black;
+    }
+    &:focus{
+      background-color: $color-black;
+      border: 2px solid $color-blue-9;
+    }
+    &[disabled=disabled],
+    &:disabled{
+      background-color: $color-gray-4;
+      color: $color-gray;
+    }
+  }
+
+  &__black-small{
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    background-color: $color-gray-3;
+    padding: $spacing-unit-11 $spacing-unit-17;
+    border-radius: $spacing-unit-26;
+    font-size: $font-size-16;
+    // font-weight: 600;
+    text-align: center;
+    color: white;
+
+    cursor: pointer;
+    border: none;
+
+    &:enabled {
+      background-color: $color-blue-11;
+    }
+    &:hover{
+      background-color: $color-black;
+    }
+    &:focus{
+      background-color: $color-black;
+      border: 2px solid $color-blue-9;
+    }
+    &[disabled=disabled],
+    &:disabled{
+      background-color: $color-gray-4;
+      color: $color-gray;
+    }
+  }
+  &__white-small{
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    background-color: $color-white;
+    padding: $spacing-unit-11 $spacing-unit-17;
+    border-radius: $spacing-unit-26;
+    font-size: $font-size-16;
+    // font-weight: 600;
+    text-align: center;
+    color: black;
+
+    cursor: pointer;
+    border: none;
+
+    &:enabled {
+      background-color: $color-blue-11;
+    }
+    &:hover{
+      background-color: $color-white;
+    }
+    &:focus{
+      background-color: $color-black;
+      border: 2px solid $color-blue-9;
+    }
+    &[disabled=disabled],
+    &:disabled{
+      background-color: $color-gray-4;
+      color: $color-gray;
+    }
+  }
+}
+

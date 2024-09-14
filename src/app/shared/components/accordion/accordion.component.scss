@@ -1,0 +1,57 @@
+@import '../../../../styles/_variables';
+@import '../../../../styles/mixins';
+
+.accordion {
+  border-radius: 12px;
+  max-width: 1071px;
+  padding: 0 16px 0 16px;
+
+  .accordion-item {
+    width: 100%;
+    margin-bottom: 12px;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    .accordion-header {
+      padding: $spacing-unit-16;
+      cursor: pointer;
+      background-color: $color-gray-5;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+
+      &.accordion-active {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      &__title {
+        width: 90%;
+      }
+
+      &__icon {
+        width: 10%;
+        text-align: right;
+      }
+    }
+
+    .accordion-body {
+      padding: $spacing-unit-16;
+      transition: max-height 0.5s ease-out;
+      background-color: $color-gray-5;
+      border-bottom-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+
+  @include respond-to('lg') {
+
+  }
+}
+

@@ -1,0 +1,118 @@
+@import '../../../../styles/_variables';
+@import '../../../../styles/_mixins';
+/**
+* Block Footer
+*/
+.block-footer {
+  display: flex;
+  height: 441px;
+  background-color: $color-black;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .footer {
+    &-wrapper {
+      min-height: 319px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &-top, &-bottom  {
+        width: 1099px;
+        display: flex;
+      }
+      &-top {
+        padding-top: 66px;
+      }
+      &-bottom {
+
+      }
+    }
+    &-info {
+      display: flex;
+      // justify-content: space-between;
+      flex-direction: column;
+      width: 60%;
+      .title-big {
+        line-height: 0;
+      }
+
+      p {
+        max-width: 515px;
+      }
+      .copyright-text {
+        font-size: $font-size-14;
+      }
+    }
+    &-menu, &-social {
+      width: 20%;
+      ul {
+        padding-left: 0px;
+        li {
+          list-style: none;
+          padding: $spacing-unit-14;
+
+          a {
+            color: $color-white;
+            opacity: 0.4;
+            font-weight: 600;
+            font-size: $font-size-16;
+            text-decoration: none;
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to('md') {
+  .block-footer {
+    display: flex;
+    height: auto;
+    background-color: $color-black;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .footer {
+      &-wrapper {
+        min-height: 319px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-top, &-bottom  {
+          max-width: 100%;
+          width: auto;
+          display: flex;
+        }
+        &-top {
+          padding-top: 66px;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        &-bottom {
+          padding: 0 41px 31px 41px;
+          width: -webkit-fill-available;
+          width: -moz-fill-available;
+        }
+      }
+      &-info {
+        padding-bottom: 104px;
+        width: 100%;
+        align-items: center;
+        p {
+          padding: 0 41px 0 41px;
+          text-align: center;
+        }
+      }
+      &-menu, &-social {
+        width: 30%;
+      }
+    }
+  }
+}

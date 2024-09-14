@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  team-angular-app:
+    build: .
+    ports:
+      - "4201:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.teamland.tls=true'
+      - 'traefik.http.routers.teamland.tls.certresolver=myresolver'
+      - 'traefik.http.routers.teamland.entrypoints=websecure'
+      - 'traefik.http.routers.teamland.rule=Host(`team-land.wsofter.com`)'
+      - 'traefik.http.services.teamland.loadbalancer.server.port=4200'
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    external: true

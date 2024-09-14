@@ -1,0 +1,123 @@
+@import '../../../../styles/_variables';
+@import '../../../../styles/_mixins';
+@import '../../../../styles/_icons';
+
+.top-nav {
+  position: fixed;
+  top: 0px;
+  background-color: $color-black;
+  height: 63px;
+  z-index: 1;
+  // width: 100%;
+  width: -webkit-fill-available;
+  width: -moz-available;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacing-unit-35 0 $spacing-unit-35;
+
+  .main-menu {
+    display: flex;
+    align-items: center;
+
+    .top-logo {
+      img {
+        height: 30px;
+      }
+    }
+
+    //@include respond-to('xl') {
+    .menu-wrapper {
+      ul {
+        margin: 0 auto;
+
+        li {
+          list-style: none;
+          float: left;
+          padding: $spacing-unit-14;
+
+          a {
+            color: $color-white;
+            opacity: 0.4;
+            font-weight: 600;
+            font-size: $font-size-16;
+            text-decoration: none;
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    //}
+
+    @include respond-to('md') {
+      .d-none {
+        display: none;
+      }
+      .menu-wrapper {
+        position: absolute;
+        top: 63px;
+        left: 0px;
+        height: 100%;
+
+        &.mobile-active {
+          height: 100vh;
+          display: block;
+          width: 100%;
+          background-color: $color-black;
+        }
+
+        ul {
+          width: 100%;
+          text-align: center;
+          margin: 0px;
+          padding-left: 0px;
+
+          li {
+            float: none;
+            a {
+              &.active {
+                position: relative;
+
+                &:before {
+                  content: url('/images/marker-ellipse.svg');
+                  position: absolute;
+                  top: -18px;
+                  left: -20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ext-menu-auth {
+    display: block;
+  }
+  .ext-menu-mobile {
+    display: none;
+  }
+
+  @include respond-to('md') {
+    .ext-menu-auth {
+      display: none;
+    }
+    .ext-menu-mobile {
+      display: block;
+      i {
+        height: 17px;
+        width: 17px;
+        display: block;
+        float: right;
+
+        &::before {
+
+        }
+      }
+    }
+  }
+}

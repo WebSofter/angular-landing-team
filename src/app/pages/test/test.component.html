@@ -1,0 +1,18 @@
+<hr/>
+<div class="test-block">
+  <h1>Hello {{name}}</h1>
+  <input type="text" [value]="name">
+  <input type="text" [(ngModel)]="name">
+  <button (click)="sayHello('Hello')">Hello</button>
+  <hr/>
+  <h2>Roles</h2>
+  <ul>
+    <li *ngFor="let role of roleList">{{role.role}}</li>
+  </ul>
+  <h2>Users</h2>
+  <ul>
+    @for(user of userList; track $index) {
+      <li>{{$index}} {{user.userName}}</li>
+    }
+  </ul>
+</div>

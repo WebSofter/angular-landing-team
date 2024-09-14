@@ -1,0 +1,23 @@
+@import './_variables';
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: #{$breakpoint-sm}) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: #{$breakpoint-md}) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: #{$breakpoint-lg}) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (max-width: #{$breakpoint-xl}) { @content; }
+  }
+
+  @if $breakpoint == 'lsm' {
+    @media (min-width: #{$breakpoint-sm}) { @content; }
+  } @else if $breakpoint == 'lmd' {
+    @media (min-width: #{$breakpoint-md}) { @content; }
+  } @else if $breakpoint == 'llg' {
+    @media (min-width: #{$breakpoint-lg}) { @content; }
+  } @else if $breakpoint == 'lxl' {
+    @media (min-width: #{$breakpoint-xl}) { @content; }
+  }
+}
