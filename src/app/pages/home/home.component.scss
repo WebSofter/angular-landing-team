@@ -539,10 +539,11 @@
   }
   .wrapper {
     flex-direction: row;
+    justify-content: space-between;
 
     .price-card {
-      max-width: 343px;
-      width: 30%;
+      max-width: 403px;
+      width: 32%;
       border-radius: 25px;
       overflow: hidden;
 
@@ -584,7 +585,7 @@
         }
       }
       .foot {
-        padding: 17px;
+        padding: 0 17px 32px 17px;
       }
     }
   }
@@ -623,6 +624,39 @@
         }
       }
     }
+  }
+}
+
+/**
+* Desktop: Block Contact
+*/
+.block-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapper {
+    max-width: 619px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 464px;
+
+      input {
+        margin-bottom: 14px;
+
+      }
+    }
+
+  }
+
+  @include respond-to('md') {
+
   }
 }
 
