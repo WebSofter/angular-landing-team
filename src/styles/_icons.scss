@@ -98,4 +98,39 @@
     content: url('/images/icons/document-normal-black.svg');
     vertical-align: middle;
   }
+
+  &-black {
+    &-gps:before{
+      content: url('/images/icons/gps-black.svg');
+      vertical-align: middle;
+    }
+    &-lamp:before{
+      content: url('/images/icons/lamp-black.svg');
+      vertical-align: middle;
+    }
+    &-message-text:before{
+      content: url('/images/icons/message-text-black.svg');
+      vertical-align: middle;
+    }
+    &-more:before{
+      content: url('/images/icons/more-black.svg');
+      vertical-align: middle;
+    }
+    &-mouse-square:before{
+      content: url('/images/icons/mouse-square-black.svg');
+      vertical-align: middle;
+    }
+    &-profile-2user:before{
+      content: url('/images/icons/profile-2user-black.svg');
+      vertical-align: middle;
+    }
+    &-tick-circle:before{
+      content: url('/images/icons/tick-circle-black.svg');
+      vertical-align: middle;
+    }
+    &-trend-up:before{
+      content: url('/images/icons/trend-up-black.svg');
+      vertical-align: middle;
+    }
+  }
 }

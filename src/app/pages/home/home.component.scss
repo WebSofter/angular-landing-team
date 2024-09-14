@@ -6,42 +6,50 @@
 */
 
 .block-hero {
-  background-color: $color-white;
+  background-color: $color-black;
   height: 600px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 16px 0 16px;
+  margin-top: -20px;
+  padding: 50px 16px 70px 16px;
   // overflow: hidden;
-  & > *{
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .hero-image {
-    background-image: url('/images/banner-bg-1.svg');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    text-align: center;
-    width: 50%;
-    height: inherit;
-    //
+  .wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: end;
-  }
-  .hero-text {
-    max-width: 591px;
+    align-items: center;
+    max-width: 1200px;
 
-    .hero-title {
-      max-width: 873px;
+    & > *{
+      padding-left: 14px;
+      padding-right: 14px;
     }
-    .hero-slogan {
-      max-width: 682px;
+
+    .hero-image {
+      background-image: url('/images/banner-bg-1.svg');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-align: center;
+      width: 570px;
+      height: 570px;
+      //
+      display: flex;
+      justify-content: center;
+      align-items: end;
+    }
+    .hero-text {
+      max-width: 591px;
+
+      .hero-title {
+        max-width: 873px;
+      }
+      .hero-slogan {
+        max-width: 682px;
+      }
     }
   }
 
@@ -50,37 +58,67 @@
     // width: 100%;
     height: auto;
     padding: 30px 16px 80px 16px;
-    & > *{
-      padding: initial;
-    }
-    .hero-image {
-      width: 100%;
-      height: 343px;
-      display: block;
-    }
-    .hero-text {
-      h1 {
-        font-size: 25px;
-        line-height: 100%;
+    .wrapper {
+      & > *{
+        padding: initial;
+      }
+      .hero-image {
+        width: 100%;
+        height: 343px;
+        display: block;
+      }
+      .hero-text {
+        h1 {
+          font-size: 25px;
+          line-height: 100%;
+        }
       }
     }
   }
-  // .hero-anime-text {
-  //   pointer-events: none;
-  //   @include typed(
-  //     "современный бизнес",
-  //     "автоматизацию и продуктивность",
-  //     1.5,
-  //     (
-  //       caret-width: 5px,
-  //       caret-space: 3px,
-  //       caret-color: $color-blue-6
-  //     )
-  //   );
-  // }
 }
 
 
+/**
+* Desktop: Block Featlist
+*/
+.block-featlist {
+  height: 914px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    max-width: 1200px;
+    .feat-banner {
+      background-repeat: no-repeat;
+      background-position: top center;
+      width: 570px;
+      height: 570px;
+      border-radius: 32px;
+    }
+    .feat-list {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 40px;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          padding-top: 9px;
+          padding-bottom: 9px;
+          i {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}
 /**
 * Desktop: Block Advantages
 */
@@ -353,6 +391,9 @@
     }
     h2 {
       font-size: 45px;
+    }
+    p {
+      font-size: 24px;
     }
     &:nth-child(1) {
       .card {
