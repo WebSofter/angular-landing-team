@@ -59,6 +59,8 @@
     height: auto;
     padding: 30px 16px 80px 16px;
     .wrapper {
+      flex-direction: column;
+
       & > *{
         padding: initial;
       }
@@ -175,6 +177,16 @@
       }
     }
   }
+
+  @include respond-to('md') {
+    .wrapper {
+      flex-direction: column;
+
+      .feat-banner {
+        width: auto;
+      }
+    }
+  }
 }
 /**
 * Desktop: Block Advantages
@@ -241,6 +253,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0 0 50px 0;
+    background-position: top 190px right 15px;
+    background-size: 80%;
 
     p {
       font-size: 20px;
@@ -533,8 +547,9 @@
   align-items: center;
 
   .wrapper {
+    display: flex;
     max-width: 1200px;
-    .feat-banner {
+    .effect-banner {
       background-repeat: no-repeat;
       background-position: top center;
       width: 570px;
@@ -577,7 +592,7 @@
         }
       }
     }
-    .feat-list {
+    .effect-list {
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -595,6 +610,24 @@
             margin-right: 6px;
           }
         }
+      }
+    }
+  }
+
+  @include respond-to('md') {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      width: -webkit-fill-available;
+      width: -moz-fill-available;
+      .effect-banner {
+        width: auto;
+      }
+      .effect-list {
+        h1 {
+          font-size: 25px;
+        }
+        width: auto;
       }
     }
   }
@@ -753,7 +786,16 @@
   }
 
   @include respond-to('md') {
+    .wrapper {
+      .contact-form {
+        width: auto;
 
+        input {
+          width: auto;
+
+        }
+      }
+    }
   }
 }
 
