@@ -556,7 +556,9 @@
           flex-direction: row;
           justify-content: space-between;
 
-          .msg-user{}
+          .msg-user{
+
+          }
           .msg-body {
             background-color: rgba($color: #fff, $alpha: 0.76);
             border-radius: 16px;
